@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .tag {
+            background-color: rgb(57, 51, 243);
+        }
+
+        .tag:checked + label {
+            background-color: rgb(250, 250, 253);
+        }
+
+        .bg-white {
+            background-color: rgb(206, 232, 206);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-4">Search Page</h1>
+
+        <form class="bg-white rounded-lg shadow-md p-4">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="tags">Tags:</label>
+                <div class="flex flex-wrap gap-2">
+                    <span class="inline-flex items-center px-3 py-1 rounded-md">
+                        <input id="tops" name="tags" type="checkbox" value="Tops" class="tag hidden" checked="true">
+                        <label for="tops" class="bg-white text-blue-500 border border-blue-500 px-3 py-1 rounded-md cursor-pointer select-none">Tops</label>
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1 rounded-md">
+                        <input id="bottoms" name="tags" type="checkbox" value="Bottoms" class="tag hidden" checked="true">
+                        <label for="bottoms" class="bg-white text-blue-500 border border-blue-500 px-3 py-1 rounded-md cursor-pointer select-none">Bottoms</label>
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1 rounded-md">
+                        <input id="bags" name="tags" type="checkbox" value="Bags" class="tag hidden" checked="true">
+                        <label for="bags" class="bg-white text-blue-500 border border-blue-500 px-3 py-1 rounded-md cursor-pointer select-none">Bags</label>
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1 rounded-md">
+                        <input id="equipment" name="tags" type="checkbox" value="Equipment" class="tag hidden" checked="true">
+                        <label for="equipment" class="bg-white text-blue-500 border border-blue-500 px-3 py-1 rounded-md cursor-pointer select-none">Equipment</label>
+                    </span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="weather">Weather Conditions:</label>
+                <input id="weather" name="weather" type="text" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="size">Size:</label>
+                <select id="size" name="size" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 appearance-none bg-white text-gray-700">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+            </div>
+
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <a href="recommendations.html">Search</a>
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const tags = document.querySelectorAll('.tag');
+        tags.forEach(tag => {
+            tag.addEventListener('change', () => {
+                tag.nextElementSibling.classList.toggle('bg-blue-500');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -7,7 +7,7 @@ const tags = document.querySelectorAll('.tag');
         });
 
 // Get the form element by its ID
-var form = document.getElementById('user_input');
+var form = document.getElementById('bg-white rounded-lg shadow-md p-4');
 
 // Add a submit event listener to the form
 form.addEventListener('submit', function(event) {
@@ -21,7 +21,7 @@ form.addEventListener('submit', function(event) {
   });
   
   // Set the selected tags as the value of the hidden input field
-  document.getElementById('selectedTags').value = selectedTags.join(',');
+  document.getElementById('tags').value = selectedTags.join(',');
   
   // Optionally, submit the form data to a server or perform other actions
   console.log('Selected Tags:', selectedTags);

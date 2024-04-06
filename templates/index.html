@@ -1,16 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion and Apparel Shopping</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom right, #4e54c8, #8f94fb);
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            opacity: 0; /* Hide the body initially */
+            animation: slide-down 1s ease forwards; /* Apply the animation */
+        }
+
+        @keyframes slide-down {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #fff;
+            color: #4e54c8;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #8f94fb;
+        }
+    </style>
 </head>
 <body>
-    <h2>Login</h2>
-    <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Login">
-    </form>
+    <div class="container">
+        <h1>Welcome to our Fashion and Apparel Store</h1>
+        <p>Discover the latest trends and shop for your favorite fashion items.</p>
+        <a href="#">Start Now</a>
+    </div>
 </body>
 </html>

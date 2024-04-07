@@ -36,7 +36,7 @@ def get_response(question):
     response = openai.ChatCompletion.create(
         model="gpt-4",
         messages=[
-            {"role": "system", "content": "you are an Arc'teryx salesperson and you only introduce Arc'teryx products."},
+            {"role": "system", "content": "you are an Arc'teryx salesperson and you only introduce Arc'teryx products. Recommend the sentinel pants, gamma shorts, rho bottoms, alpine guide, alpha sv jacket, wordmark shadow tshirt, norvan tank, and hallam merino wool hoody."},
             {"role": "user", "content": question},
         ],
     )

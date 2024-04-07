@@ -3,8 +3,13 @@ const tags = document.querySelectorAll('.tag');
             tag.addEventListener('change', () => {
                 tag.nextElementSibling.classList.toggle('bg-blue-500');
                 tag.classList.toggle('selected');
+                // const items = document.querySelectorAll('[data-tags]');
+                // console.log(items);
+                
             });
         });
+        
+        
 
 
         const form = document.getElementById('searchForm');
@@ -48,9 +53,8 @@ const tags = document.querySelectorAll('.tag');
 
                     weatherInfo.innerHTML = `<p>Weather in ${cityName}: ${weatherDescription}</p>
       <p>Temperature: ${temperature}°C</p>`;
-                };
-                 
       
+                };
 
             } catch (error) {
                 console.error('Error fetching weather data:', error);
@@ -73,7 +77,15 @@ const tags = document.querySelectorAll('.tag');
               keywords.push('cold');
           } else {
           }
-      
-          return keywords;
-      }
+          const url = 'recommendations.js';
+          window.location.href = url; // Redirect to the constructed URL
 
+          
+          return keywords;
+          
+
+      }
+      
+      
+
+      

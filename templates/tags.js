@@ -19,6 +19,8 @@ const tags = document.querySelectorAll('.tag');
               console.log(weatherData);
 
               const keywords = getKeywords(weatherData);
+              const keywordsParam = keywords.join('.');
+              window.location.href = `recommendations.html?keywords=${keywordsParam}`;
               console.log(keywords);
 
           })
@@ -74,4 +76,4 @@ const tags = document.querySelectorAll('.tag');
       
           return keywords;
       }
-       
+
